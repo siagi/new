@@ -1,0 +1,42 @@
+#jeden {
+    float: left;
+    width: 100%;
+    background: #ccc;
+    border-bottom: 5px solid #000;
+    overflow: hidden;
+    position: relative;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+ul li {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 25%;
+}
+
+ul a:link,
+ul a:visited {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: aqua;
+    color: #ffffff;
+    border: 1px outset #ccc;
+    padding: 5px;
+}
+
+ul a:hover {
+    border-style: inset;
+    padding: 5px;
+}
