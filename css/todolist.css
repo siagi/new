@@ -1,0 +1,498 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    background: #000;
+    color:#fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.todo-cnt {
+    max-width:75%;
+    margin:0 auto;
+}
+.todo-form {
+    padding: 1rem;
+    background: #e30038;
+    border:4px solid #fff;
+}
+.todo-form-row {
+    overflow: hidden;
+}
+.todo-form-label {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+.todo-form-message {
+    padding: 1rem;
+    height: 50px;
+    width: 100%;
+    border: 0;
+    outline:none;
+    margin-bottom: 0.5rem;
+    resize: vertical;
+    font-family:sans-serif;
+}
+.todo-form-button {
+    padding: 0.8rem 1.6rem;
+    background: #fff;
+    color: #e30038;
+    border: 0;
+    transition: 0.4s all;
+    cursor: pointer;
+    float: right;
+}
+.todo-form-button:hover {
+    background: #ff124c;
+    color:#fff;
+}
+.todo-list-cnt {
+    background: #e30038;
+    margin:1rem 0;
+    border:4px solid #fff;
+    padding:1rem 2rem;
+}
+.todo-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo-list-search-form {
+    width:50%;
+}
+.todo-list-search {
+    border:0;
+    outline:none;
+    padding:0.5rem;
+    margin-bottom:5px;
+    width: 100%;
+}
+.todo-list-title {
+    margin-top:0;
+    margin-bottom:0;
+    font-size:20px;
+    text-transform: uppercase;
+}
+.todo-element {
+    border-top:1px solid #940024;
+    margin-top:1px;
+    padding-top:1px;
+    padding-bottom: 1px;
+    background-color: #ff124c;
+}
+.todo-element-bar {
+    overflow:hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:2px;
+    font-size:14px;
+}
+.todo-element-date {
+    margin:0;
+}
+.todo-element-date {
+    font-size:0.9rem;
+    font-weight: normal;
+}
+.todo-element-delete {
+    color: #fff;
+    border:0;
+    font-size:1rem;
+    background: none;
+    cursor: pointer;
+    padding-right:5px;
+    transition:0.4s all;
+}
+.todo-element-delete svg {
+    pointer-events: none; /* nie chcemy obsługi kliknięć na elementy svg - bo takie dodaje użyty fontAwesome */
+}
+.todo-element-delete:hover {
+    color:#940024;
+}
+.todo-element-text {
+    color:#fff;
+    font-size:16px;
+}
+
+h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    margin:10px;
+    text-shadow: 2px 1px 2px black;
+}
+h3{
+    font-size: 25px;
+    font-weight: 400;
+    text-shadow: 2px 1px 2px black;
+}
+h4{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:20px;
+    font-weight: 400;
+    margin-bottom:10px;
+    margin-top:10px;
+    text-shadow: 2px 1px 2px black;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+}
+.container>div{
+    height:300px;
+    background-size: cover;
+    background-attachment: fixed;
+
+    
+}
+
+/*opacity: 0.7;
+transform: scale(0.98); */
+
+    
+
+/*.container>div:nth-of-type(2){
+    grid-column: 2/4;
+}
+.container>div:nth-of-type(3){
+  grid-column: 1/4;
+}
+/*
+.container>div:nth-of-type(4){
+    grid-column: 1/3;
+}
+.container>div:nth-of-type(5){
+    grid-column: 3/5;
+}
+.container>div:nth-of-type(9){
+    grid-column: 3/6;*/
+
+.backgroundImage{
+    background: url(/projektzaliczeniowystronawww/assets/editedbackground.jpg)
+}
+.backgroundImage2{
+    background: url(/projektzaliczeniowystronawww/assets/editedbackground2.jpg)
+}
+.backgroundImage3{
+    border:4px #fff solid;
+    margin: 0 auto;
+    margin-bottom: 20px;;
+    width:75%;
+  padding:10px;
+  padding-left: 20px;
+  height: 500px!important;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  background-color: darkgray;
+}
+/*.backgroundImage4{
+  background: url(/projektzaliczeniowystronawww/assets/fot3.jpg);
+  background-size: cover;
+  background-position-y: inherit;
+}
+.backgroundImage5{
+  background: url(/projektzaliczeniowystronawww/assets/fot4.jpg);
+  background-size: cover;
+  background-position-y: inherit;
+}
+.backgroundImage6{
+  background: url(/projektzaliczeniowystronawww/assets/fot5.jpg);
+  background-size: cover;
+  background-position-y: inherit;
+} */
+/*.backgroundImage3:hover{
+opacity: 0.7;
+transform: scale(0.98);
+}*/
+.topNav {
+    background-color: #e30038;
+    color:#fff;
+    width:100%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    overflow: hidden;
+    display: flex;
+  }
+  .topNav a {
+    color: #fff;
+    text-align: center;
+    padding: 2px;
+    text-decoration: none;
+    font-size: 35px;
+    width:100%;
+    transition: all 0.2s ease-in-out;
+  }
+  .topNav a:hover {
+    background-color: #cb0032;
+    color:#fff;
+    
+  }
+  .topNav a.active {
+    background-color: #ff124c;
+    color: #fff;
+  }
+  .separatorNavTop{
+    background-image: url(/projektzaliczeniowystronawww/assets/separatormenu.jpg);
+    width:10px;
+    background-repeat:repeat-y;
+    float:right;
+  }
+  .pixelLine{
+      background-image: url(/projektzaliczeniowystronawww/assets/pixelline.jpg);
+      background-repeat: repeat-x;
+      width: 100%;
+      height: 4px;
+      margin-bottom: 10px;
+  }
+  
+  footer{
+      background-color:#e30038 ;
+      width:100%;
+      height:100%;
+     
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+   
+      
+  }
+  .bottomLeft{
+   padding:15px;   
+    
+      
+  }
+  .bottomMiddle{
+    
+    padding:15px;
+   
+}
+.bottomRight{
+    
+    padding:15px;
+
+    
+}
+  .separatorRight{
+    background-image: url(/projektzaliczeniowystronawww/assets/separatormenu.jpg);
+    background-repeat: repeat-y;
+    width:2px;
+    min-height: 10px;
+    height:80%;
+    float:right;
+    margin-left:20px;
+  }
+  .pixelLineFooter{
+    background-image: url(/projektzaliczeniowystronawww/assets/pixellinereverside.jpg);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 4px;
+    margin-top: 10px;
+  }
+
+  .bottomRightNav {
+    background-color: #e30038;
+    color:#fff;
+    width:100%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: thick;
+    
+  }
+  .bottomRightNav a {
+    color: #fff;
+    text-align: left;
+    padding: 2px;
+    text-decoration: none;
+    font-size: 16px;
+    width:100%;
+    padding:5px;
+    transition: all 0.2s ease-in-out;
+    
+    
+  }
+  .bottomRightNav a:hover {
+    background-color: #cb0032;
+    color:#fff;
+    
+  }
+  .bottomRightNav a.active {
+    
+    color: #fff;
+  }
+  .bottomRightNavName{
+      font-size: 20px;
+      text-shadow: 2px 1px 0px #930024;
+      margin-bottom: 5px;
+
+  }
+  .bottomLeftCompanyDetails{
+      padding-left: 15px;;
+  }
+.icon{
+    width: 10vh;
+}
+.squareWithLogo{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.socialIcon{
+    width:50px;
+    margin:5px;
+}
+.companyLogo{
+  height:200px!important;
+}
+.smallContainer{
+  width:100%;
+  display: flex;
+    flex-direction: row!important;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+}
+.googleMap{
+    width:100%;
+    height:150px;
+    position: relative;
+    padding: 10px;
+
+}
+@media all and (max-width:769px){
+    body{
+      font-size:14px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+    .container{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 10px;
+  }
+  .container>div{
+    
+   height: 200px;
+   overflow: auto;
+  }
+  .socialIcon{
+    width:35px;
+    margin:5px;
+  }
+  .topNav a {
+    color: #fff;
+    text-align: center;
+    padding: 2px;
+    text-decoration: none;
+    font-size: 20px;
+    width:100%;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  }
+  @media all and (max-width:425px){
+    body{
+      font-size:13px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+    .container{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      grid-gap: 10px;
+  }
+  .container>div{
+    
+   height: 300px;
+   overflow: auto;
+  }
+  .socialIcon{
+    width:35px;
+    margin:5px;
+  }
+  footer{
+    background-color:#e30038 ;
+    width:100%;
+    height:100%;
+   
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+  .topNav {
+    background-color: #e30038;
+    color:#fff;
+    width:100%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction:column ;
+  }
+  .topNav a {
+    color: #fff;
+    text-align: center;
+    padding: 2px;
+    text-decoration: none;
+    font-size: 16px;
+    width:100%;
+    transition: all 0.2s ease-in-out;
+  }
+  .topNav a:hover {
+    background-color: #cb0032;
+    color:#fff;
+    
+  }
+  .topNav a.active {
+    background-color: #ff124c;
+    color: #fff;
+  }
+  .separatorRight{
+    background-image:"";
+    background-repeat: repeat-y;
+    width:0px;
+    min-height: 10px;
+    height:80%;
+    float:right;
+    
+  }
+  .separatorNavTop{
+    background-image: url(/projektzaliczeniowystronawww/assets/separatormenuhorizontal.jpg);
+    height: 2px;
+    background-repeat: repeat-x;
+    width: 100%;
+  }
+  .container>div:nth-of-type(2){
+    grid-column: 1/1;
+  }
+  .todo-list-title {
+    margin-top:0;
+    margin-bottom:0;
+    font-size:14px;
+    text-transform: uppercase;
+  }
+  .todo-cnt {
+    max-width:100%;
+    margin:0 auto;
+}
+.backgroundImage3{
+    border:4px #fff solid;
+    margin: 0 auto;
+    margin-bottom: 20px;;
+    width:100%;
+  padding:10px;
+  padding-left: 20px;
+  height: 500px!important;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  background-color: darkgray;
+}
+
+}
